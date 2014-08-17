@@ -6,10 +6,21 @@ The purpose of this is to make Damian Conway's `vim-autoswap` plugin working
 with KDE's konsole application.
 One of the features of vim-autoswap is, when editing a file which is already
 open in another vim session, it brings this window to the foreground. Therefore
-it needs to interact with the windows manager. `vim-autoswap` uses `wmctrl` to
+it needs to interact with the window manager. `vim-autoswap` uses `wmctrl` to
 list windows and activate windows, but the window must display the current
-filename in the first place.
+filename in the first place. That's what this plugin is for.
 Note, this only works with KDE4, not with KDE3.
+
+Requirements
+------------
+
+* vim 7.x
+* KDE4.x
+
+When using Damian Conway's `vim-autoswap` plugin, you will need
+
+* the plugin itself: see https://github.com/gioele/vim-autoswap
+* wmctrl: install it using your package manager
 
 Authors
 -------
