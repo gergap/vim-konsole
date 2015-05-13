@@ -17,7 +17,7 @@ function! s:update_session_name()
     endif
 endfunction
 function! s:clear_session_name()
-    !qdbus org.kde.konsole $KONSOLE_DBUS_SESSION org.kde.konsole.Session.setTitle 1 $(printf '%q' "$PWD")
+    !qdbus org.kde.konsole $KONSOLE_DBUS_SESSION org.kde.konsole.Session.setTitle 1 $PWD
 endfunction
 
 
