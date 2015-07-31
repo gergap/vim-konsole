@@ -10,13 +10,15 @@ augroup KDE
 augroup END
 function! s:update_session_name()
     if !empty(@%)
-        !qdbus org.kde.konsole $KONSOLE_DBUS_SESSION org.kde.konsole.Session.setTitle 1 %
+        silent !qdbus org.kde.konsole $KONSOLE_DBUS_SESSION org.kde.konsole.Session.setTitle 1 %
     else
-        !qdbus org.kde.konsole $KONSOLE_DBUS_SESSION org.kde.konsole.Session.setTitle 1 'empty'
+        silent !qdbus org.kde.konsole $KONSOLE_DBUS_SESSION org.kde.konsole.Session.setTitle 1 'empty'
     endif
+    redraw!
 endfunction
 function! s:clear_session_name()
-    !qdbus org.kde.konsole $KONSOLE_DBUS_SESSION org.kde.konsole.Session.setTitle 1 $PWD
+    silent !qdbus org.kde.konsole $KONSOLE_DBUS_SESSION org.kde.konsole.Session.setTitle 1 $PWD
+    redraw!
 endfunction
 
 
